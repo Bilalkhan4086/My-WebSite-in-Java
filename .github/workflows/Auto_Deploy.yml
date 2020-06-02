@@ -25,12 +25,12 @@ jobs:
     - name: installing nodde
       run: actions/setup-node@v2-beta
       with:
-        node-version:12  
+        node-version : 12  
         
 
     # Runs a set of commands using the runners shell
     - name: Installing surge
       run: npm install -g surge
       
-      name: Deploying 
+      name: last step
       run: surge ./  MyFirstJavaWebsite.surge.sh --token ${{secrets.TOKEN_NUMBER}}
